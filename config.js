@@ -160,8 +160,7 @@ global.cmenut = '─────『'                       //top
 global.cmenuh = '』─────'                        //header
 global.cmenub = '│• '                            //body
 global.cmenuf = ' └────\n'                //footer
-global.cmenua = '`
-`,' //after
+global.cmenua = '``,' //after
 global.pmenus = '┊'                              //pembatas menu selector
 
 global.htki = '––––––『' // Hiasan Titile (KIRI)
