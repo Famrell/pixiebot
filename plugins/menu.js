@@ -272,13 +272,13 @@ let tek = `*✧${ucapan()} ${conn.getName(m.sender)}*
 ┝ *🅟* = Premium
 ┝ *Ⓛ* = Limit
 ╰═┅═━–––๑
-╭━━━━「 *Ʋser Ɩnfσrmαtισn* 」
+╭━━━━「 *User Information* 」
 ┝🌸• *Name:* ${usrs.registered ? usrs.name : conn.getName(m.sender)}
 ┝🌸• *Tags:* @${m.sender.split`@`[0]}
 ┝🌸• *Status:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
 ┝🌸• *Premium:* ${usrs.premiumTime > 1 ? 'Yes': 'No'}
 ╰═┅═━═┅═━═┅═━––––––๑
-╭═┅═「 *Bσt Ɩnfσrmαtισn* 」
+╭═┅═「 *Bσt Information* 」
 ┝⏳• *Uptime:* ${mpt}
 ┝⏲️• *Time:* ${moment.tz('Asia/Jakarta').format('HH')} H  ${moment.tz('Asia/Jakarta').format('mm')} M  ${moment.tz('Asia/Jakarta').format('ss')} S
 ┝👤• *Users:* ${Object.keys(global.db.data.users).length}
@@ -288,7 +288,7 @@ let tek = `*✧${ucapan()} ${conn.getName(m.sender)}*
 ┝📛• *Expired Premium:*
 ${clockStringP(usrs.premiumTime - new Date())}` : ''}
 ╰═┅═━═┅═━═┅═━––––––๑
-               「 *FANGZ BOT あ⁩* 」
+               「 *PixiPEDIA* 」
 `
 const listMessage = {
   text: tek,
