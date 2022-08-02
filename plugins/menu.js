@@ -11,29 +11,87 @@ import fetch from 'node-fetch'
 
 const defaultMenu = {
   before: `
-╭─❑ 「 INFO BOT 」─❑
-│⬡📊 *Version*: %version
-│⬡🗃️ *Lib*: Baileys-MD
-│⬡🧪 *Mode:* ${global.opts['self'] ? 'Self' : 'publik'}
-│⬡⏰ *Uptime:* %uptime
-╰❑
-╭─❑ 「 INFO BOT 」─❑
-│⬡ 📇 *Name*:  %name 
-│⬡ 🆔 *Status*: ---
-│⬡ 🎫 *Limit*: %limit
-│⬡ 💹 *Money*: %money
-│⬡ ✨ *Exp*: %totalexp
-│⬡ 📊 *Level*: %level
-│⬡ 📍 *Role*: %role
-│⬡ 💲Premium : ${global.prem ? '✅' : '❌'}
-╰❑
+"%dash
+
+%m1 *U S E R*
+
+%m2 *Name:* %name
+
+%m2 *Tag:* %tag
+
+%m2 *Status:* %prems
+
+%m2 *Limit:* %limit
+
+%m2 *Money:* %money
+
+%m2 *Role:* %role
+
+%m2 *Level:* %level [ %xp4levelup Xp For Levelup]
+
+%m2 *Xp:* %exp / %maxexp
+
+%m2 *Total Xp:* %totalexp
+
+%m3
+
+%m1 *T O D A Y*
+
+%m2 *%ucpn*
+
+%m2 *Days:* %week %weton
+
+%m2 *Date:* %date
+
+%m2 *Islamic Date:* %dateIslamic
+
+%m2 *Time:* %wib
+
+%m3
+
+%m1 *I N F O*
+
+%m2 *Bot Name:* %me
+
+%m2 *Mode:* %mode
+
+%m2 *Platform:* %platform
+
+%m2 *Type:* Node.Js
+
+%m2 *Baileys:* Multi Device
+
+%m2 *Prefix:* [ *%_p* ]
+
+%m2 *Uptime:* %muptime
+
+%m2 *Database:* %rtotalreg dari %totalreg
+
+%m3
+
+%m1 *I N F O  C M D* 
+
+%m4 *Ⓟ* = Premium
+
+%m4 *Ⓛ* = Limit
+
+%m3
+
 %readmore
+
 `.trimStart(),
+
   header: '%cc *%category* %c1',
+
   body: '%c2 %cmd %isPremium %islimit',
+
   footer: '%c3',
+
   after: `%c4 %me`,
-}
+
+}"
+
+ https://github.com/Jikarinka/kannabotv2/blob/main/plugins/menu.js#:~:text=%25dash,%7D
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	let tags
 	let teks = `${args[0]}`.toLowerCase()
